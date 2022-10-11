@@ -1,0 +1,47 @@
+
+body{
+    background-color: gray;
+}
+
+.grid-container{
+    display: grid;
+    padding: 70px;
+    background-color: dimgrey;
+    width: 300px;
+    margin: auto;
+}
+
+h1{
+    font-family:"Gill Sans", sans-serif;
+    text-align: center;
+    font-size: 3em;
+}
+
+label{
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.wrapper .box{
+    width: 100%;
+    position:relative;
+    padding: 10px;
+}
+
+.wrapper .box input{
+    width: 100%;
+    font-size: 20px;
+    border-bottom: 1px solid darkblue;
+    background:transparent;
+}
+
+#btnsubmit{
+    background: antiquewhite;
+    padding: 10px 10px;
+    border: none;
+    font-size: 20px;
+    display: block;
+    margin: auto;
+}
+
+
