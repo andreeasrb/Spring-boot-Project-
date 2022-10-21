@@ -11,4 +11,8 @@ public interface FacultateRepository {
     Facultate get(String facultateName);
 
     List<Facultate> getAll();
+
+    String updateFacultate(Facultate facultate);
+
+    List<String> extract();
 }

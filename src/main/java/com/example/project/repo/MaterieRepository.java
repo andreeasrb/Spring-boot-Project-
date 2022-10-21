@@ -11,4 +11,6 @@ public interface MaterieRepository {
     Materie get(String materieName);
 
     List<Materie> getAll();
+
+    String updateMaterie(Materie materie);
 }

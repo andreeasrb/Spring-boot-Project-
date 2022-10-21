@@ -6,6 +6,8 @@ import com.example.project.repo.FacultateRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class FacultateRepositoryImpl implements FacultateRepository {
 
@@ -24,6 +26,7 @@ public class FacultateRepositoryImpl implements FacultateRepository {
 
         all.add(Poli);
         all.add(UBB);
+
     }
 
 
@@ -34,7 +37,7 @@ public class FacultateRepositoryImpl implements FacultateRepository {
 
     @Override
     public void delete(Facultate facultate) {
-        all.removeIf(f -> f.getFacultateName().equals(facultate));
+        all.removeIf(f -> f.getFacultateName().equals(facultate.getFacultateName()));
     }
 
     @Override
@@ -58,7 +61,7 @@ public class FacultateRepositoryImpl implements FacultateRepository {
         //exista in obiecte deja - yes, update, no-create/add
         boolean resourceFound = false;
         for(Facultate currentFacultate: all){
-            if(currentFacultate.getFacultateId() == facultate.getFacultateId()){
+            if(Objects.equals(currentFacultate.getFacultateId(), facultate.getFacultateId())){
                 resourceFound = true;
                 currentFacultate.setFacultateId(facultate.getFacultateId());
                 currentFacultate.setFacultateName(facultate.getFacultateName());
@@ -70,6 +73,15 @@ public class FacultateRepositoryImpl implements FacultateRepository {
         }
         return "Facultate Update Successfully";
     }
+
+    public List<String> extract(){
+         return all.stream() //convert list to stream
+                .map(Facultate::getFacultateName)
+                .filter(element -> element.contains("a"))
+                .collect(Collectors.toList());
+    }
+
+
 }
 
 

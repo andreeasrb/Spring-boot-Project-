@@ -10,12 +10,21 @@ body{
     width: 300px;
     margin: auto;
 }
+.grid-container2{
+    display: grid;
+    padding: 45px;
+    background-color: dimgrey;
+}
+td,th{
+    font-size: 30px;
+}
 
 h1{
     font-family:"Gill Sans", sans-serif;
     text-align: center;
     font-size: 3em;
 }
+
 
 label{
     font-family: sans-serif;
@@ -43,5 +52,6 @@ label{
     display: block;
     margin: auto;
 }
+
 
 

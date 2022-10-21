@@ -12,4 +12,5 @@ public interface StudentRepository {
     Student get(String studentName);
     List<Student> getAll();
 
+    String updateStudenti(Student student);
 }

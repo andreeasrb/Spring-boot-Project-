@@ -6,7 +6,9 @@ import com.example.project.repo.StudentRepository;
 import com.example.project.repo.impl.FacultateRepositoryImpl;
 import com.example.project.repo.impl.MaterieRepositoryImpl;
 import com.example.project.repo.impl.StudentRepositoryImpl;
+import org.springframework.stereotype.Service;
 
+@Service
 public class AppService {
     private FacultateRepository facultateRepository;
     private MaterieRepository materieRepository;

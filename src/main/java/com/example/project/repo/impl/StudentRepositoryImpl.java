@@ -1,5 +1,6 @@
 package com.example.project.repo.impl;
 
+import com.example.project.entity.Materie;
 import com.example.project.entity.Student;
 import com.example.project.repo.StudentRepository;
 
@@ -14,14 +15,17 @@ public class StudentRepositoryImpl implements StudentRepository {
 
         Student Buget = new Student();
         Buget.setStudentId(4L);
-        Buget.setStudentName("Buget");
+        Buget.setStudentName("Andreea");
+        Buget.setStudentParola("asd");
 
         Student Taxa = new Student();
         Taxa.setStudentId(5L);
-        Taxa.setStudentName("Taxa");
+        Taxa.setStudentName("Diana");
+        Taxa.setStudentParola("zxc");
 
         all.add(Buget);
         all.add(Taxa);
+
     }
 
     @Override
@@ -68,4 +72,6 @@ public class StudentRepositoryImpl implements StudentRepository {
         }
         return "Student Update Successfully";
     }
+
+
 }
