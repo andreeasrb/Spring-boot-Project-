@@ -5,6 +5,7 @@ import com.example.project.entity.Student;
 import com.example.project.repo.StudentRepository;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class StudentRepositoryImpl implements StudentRepository {
@@ -17,11 +18,13 @@ public class StudentRepositoryImpl implements StudentRepository {
         Buget.setStudentId(4L);
         Buget.setStudentName("Andreea");
         Buget.setStudentParola("asd");
+        Buget.setMateriiStud(Collections.singletonList(3L));
 
         Student Taxa = new Student();
         Taxa.setStudentId(5L);
         Taxa.setStudentName("Diana");
         Taxa.setStudentParola("zxc");
+        Taxa.setMateriiStud(Collections.singletonList(1L));
 
         all.add(Buget);
         all.add(Taxa);

@@ -43,4 +43,5 @@ public class Student {
     public void setStudentParola(String studentParola) {
         this.studentParola = studentParola;
     }
+
 }
