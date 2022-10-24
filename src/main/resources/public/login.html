@@ -8,20 +8,19 @@
 </head>
 
 <body>
+<h1>Login</h1>
 <div class="grid-container">
-    <h1>Login</h1>
     <form class="login" name="Login" action="POST" >
-        <div class="wrapper">
             <div class="box">
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" required>
             </div>
-
             <div class="box">
                 <label for="password">Passsword</label>
                 <input type="password" name="password" id="password" required>
             </div>
-        </div>
+        <br>
+
         <input type="button" id="btnsubmit" value="Login" onclick="loginButton">
         <br><br>
         <label for="error" id="error" style="visibility: hidden">Invalid username or password!</label>

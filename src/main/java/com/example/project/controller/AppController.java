@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 
@@ -147,7 +148,7 @@ public class AppController {
     public ResponseEntity<?> getMaterie(@PathVariable String studentName){
       StudentRepository studRepo = appService.getStudentRepository();
       Student stud = studRepo.get(studentName);
-      List <Long> materiiIds = stud.getMateriiStud();
+      final List <Long> materiiIds = stud.getMateriiStud();
       List <String> attending = appService.getMaterieRepository().getAll().stream()
               .filter(materie -> materiiIds.contains(materie.getMaterieId()))
               .map(Materie::getMaterieName)
